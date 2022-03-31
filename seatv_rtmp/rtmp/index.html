@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" href="http://netlinkbroadcaster.com/image/logo/netlink.jpg" sizes="65x65">
+     <title>Netlink Broadcaster</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="Netlink Broadcaster is provider media stream server">
+     <meta name="keywords" content="SEATV, netlink broadcaster, IPTV">
+     <meta name="author" content="Yim Monireak develop digital TV to SEATV">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <meta property="og:url" content="http://netlinkbroadcaster.com" />
+     <meta property="og:type" content="SEATV Digital, iptv, TV online" />
+     <meta property="og:title" content="ទូរទស្សន៏អាសុីអាគ្នេយ៏(SEATV)" />
+     <meta property="og:image" content="http://netlinkbroadcaster.com/image/logo/seatv.netlinkbroadcaster.com.jpg" />
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/font-awesome.min.css">
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/aos.css">
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/owl.theme.default.min.css">
+     
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="http://netlinkbroadcaster.com/css/templatemo-digital-trend.css">
+
+</head>
+<body>
+
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg position-absolute">
+        <div class="container">
+          <a class="navbar-brand" href="http://netlinkbroadcaster.com">
+            <img src="http://netlinkbroadcaster.com/image/logo/netlink.jpg" alt="Logo" width="55" height="55">   
+            Netlink Broadcaster
+          </a>
+        </div>
+    </nav>
+
+
+     <!-- BLOG -->
+     <section class="blog section-padding">
+          <div class="container">
+            <div class="col-lg-12 text-center ">
+              <img src="http://netlinkbroadcaster.com/image/logo/live_streaming.gif" alt="Logo" width="12%" >  
+              <img src="http://netlinkbroadcaster.com/image/logo/seatv.png" alt="Logo" width="12%" >
+            </div>
+                
+                <video id="video" width="100%"  autoplay controls></video>
+                <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+                <script>
+                    var video = document.getElementById("video");
+                    var videoSrc = "http://seatv_r.netlinkbroadcaster.com/hls/test.m3u8";
+                    if (Hls.isSupported()) {
+                       var hls = new Hls();
+                       hls.loadSource(videoSrc);
+                       hls.attachMedia(video);
+                    }
+                     else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                       video.src = videoSrc;
+                    }
+                </script>
+     </section>
+
+     <!-- SCRIPTS -->
+     <script src="http://netlinkbroadcaster.com/js/jquery.min.js"></script>
+     <script src="http://netlinkbroadcaster.com/js/bootstrap.min.js"></script>
+     <script src="http://netlinkbroadcaster.com/js/aos.js"></script>
+     <script src="http://netlinkbroadcaster.com/js/owl.carousel.min.js"></script>
+     <script src="http://netlinkbroadcaster.com/js/custom.js"></script>
+
+</body>
+</html>
